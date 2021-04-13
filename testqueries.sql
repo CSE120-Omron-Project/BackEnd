@@ -20,7 +20,7 @@
 -- FROM `b'test2'`.omronprojectpdfstranslated;
 
 -- Adding 1 Day to Date
--- SELECT DISTINCT DATE_ADD(`Check`, INTERVAL 1 DAY) AS DailyDate
+-- SELECT DISTINCT `Robot`,`Part`, DATE_ADD(`Check`, INTERVAL 1 DAY) AS DailyDate
 -- FROM `b'test2'`.omronprojectpdfstranslated
 -- WHERE `Period` = 'Daily';
 
@@ -45,3 +45,4 @@ WHERE `Period` = '6 Months';
 
 -- SELECT `Robot` AND `PART`
 -- FROM `b'test2'`.omronprojectpdfstranslated;
+
