@@ -51,4 +51,3 @@ INSERT INTO OmronProjectPDFsTranslated VALUES
     (NULL,'LD',14,'Docking Station','3 Months',15,'2021-05-04'),
     (NULL,'LD',15,'Cleaning','Daily',5,'2021-05-04'),
     (NULL,'LD',16,'Operation Check','N/A',15,'2021-05-04');
-    
