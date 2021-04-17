@@ -1,13 +1,21 @@
--- SELECT `Serial_Number` 
--- FROM `b'test2'`.omronprojectpdfstranslated;
 
--- SELECT `Robot` 
--- FROM `b'test2'`.omronprojectpdfstranslated;
+
+-- Filtering by Robot and Part
+SELECT `Robot` AND `PART`
+FROM `b'test2'`.omronprojectpdfstranslated;
+
+-- Filtering by Robot
+SELECT `Robot` 
+FROM `b'test2'`.omronprojectpdfstranslated;
+
+-- Filtering by Part
+SELECT `Part` 
+FROM `b'test2'`.omronprojectpdfstranslated;
 
 -- SELECT `Procedure` 
 -- FROM `b'test2'`.omronprojectpdfstranslated;
 
--- SELECT `Part` 
+-- SELECT `Serial_Number` 
 -- FROM `b'test2'`.omronprojectpdfstranslated;
 
 -- SELECT `Period` 
@@ -19,6 +27,7 @@
 -- SELECT `Check` 
 -- FROM `b'test2'`.omronprojectpdfstranslated;
 
+-- Date Addition:
 -- Adding 1 Day to Date
 -- SELECT DISTINCT `Robot`,`Part`, DATE_ADD(`Check`, INTERVAL 1 DAY) AS DailyDate
 -- FROM `b'test2'`.omronprojectpdfstranslated
@@ -39,6 +48,8 @@
 -- FROM `b'test2'`.omronprojectpdfstranslated
 -- WHERE `Period` = 'Yearly';
 
+
+-- Remaining Days:
 -- Remaining Days ( Daily ) 
 SELECT DISTINCT `Robot`,`Part`, DATEDIFF(DATE_ADD(`Check`, INTERVAL 1 DAY),CURDATE()) 
 FROM `b'test2'`.omronprojectpdfstranslated
@@ -60,8 +71,6 @@ FROM `b'test2'`.omronprojectpdfstranslated
 WHERE `Period` = 'Yearly';
 
 
--- SELECT `Robot` AND `PART`
--- FROM `b'test2'`.omronprojectpdfstranslated;
 
 
 
