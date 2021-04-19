@@ -1,11 +1,22 @@
+DROP TABLE IF EXISTS Serial_Number;
+DROP TABLE IF EXISTS Robot;
+DROP TABLE IF EXISTS Procedure;
+DROP TABLE IF EXISTS Part;
+DROP TABLE IF EXISTS Period;
+DROP TABLE IF EXISTS Time;
+DROP TABLE IF EXISTS Serial_Number;
+DROP TABLE IF EXISTS Check;
+DROP TABLE IF EXISTS Urgency;
+
 CREATE TABLE IF NOT EXISTS OmronProjectPDFsTranslated (
-    `Serial_Number` INT,
-    `Robot` VARCHAR(17) CHARACTER SET utf8,
-    `Procedure` INT,
-    `Part` VARCHAR(30) CHARACTER SET utf8,
-    `Period` VARCHAR(9) CHARACTER SET utf8,
-    `Time` INT,
-    `Check` DATE
+    `Serial_Number` decimal(15,0),
+    `Robot` varchar (17) not null,
+    `Procedure` decimal(2,0) not null,
+    `Part` varchar (30) not null,
+    `Period` varchar(9) not null,
+    `Time` decimal(3,0) not null,
+    `Check` date not null,
+    `Urgency` varchar(30) not null
 );
 INSERT INTO OmronProjectPDFsTranslated VALUES
     (NULL,'i4-350L/450L/550L',1,'Front Panel','3 Months',5,'2021-05-04'),
